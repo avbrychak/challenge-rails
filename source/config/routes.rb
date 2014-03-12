@@ -1,6 +1,8 @@
 Source::Application.routes.draw do
   root "offers#index"
-  resources :offers, only: [:index] 
+  get 'crawl' => "offers#crawl", as: :crawl
+  resources :offers, only: [:index] do
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
