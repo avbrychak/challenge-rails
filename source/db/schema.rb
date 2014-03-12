@@ -14,12 +14,14 @@
 ActiveRecord::Schema.define(version: 20140312110846) do
 
   create_table "merchants", force: true do |t|
+    t.integer  "merchant_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "offers", force: true do |t|
+    t.integer  "offer_id"
     t.integer  "merchant_id"
     t.string   "title"
     t.text     "description"
