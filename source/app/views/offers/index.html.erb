@@ -9,13 +9,11 @@
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-10 offers">
-    <% @offers.each do |offer| %>
-      <div class="jumbotron offer">
-        <h3><%= offer.title%></h3>
-        <p><%= offer.description%></p>
-        <p>
-          <a class="btn btn-primary btn-lg" role="button">Get deal</a>
-        </p>
+    <%= div_for(@offers, class: "jumbotron offer") do |offer| %>
+      <h3><%= offer.title%></h3>
+      <p><%= offer.description%></p>
+      <div class="get_deal">
+        <a class="btn btn-primary btn-lg" role="button">Get deal</a>
       </div>
     <% end %>
   </div>
